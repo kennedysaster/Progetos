@@ -24,10 +24,12 @@ public class mediaaluno {
 		if (idade >= 16 && possui == 1) {
 			String somadados = maioridade + " e " + "Possui titulo de eleitor";
 			System.out.println(somadados);
+			
 
 		} else if (idade >= 16 && possui == 2) {
+			int protP = 2022;
 			System.out.println(maioridade + " e não possui titulo de eleitor");
-					
+
 			System.out.println("INFORME SEU DADOS PESSOAS PARA EMISSAO DO TITULO");
 			System.out.println("-----------------------------------------------");
 			System.out.println("Seu Nome:");
@@ -38,33 +40,41 @@ public class mediaaluno {
 			String maeN = scan.next();
 			System.out.println("Endereço:");
 			String enderc = scan.next();
+
+					
+			System.out.println("-----------SOLICITAÇÃO DE TITULO DE ELEITOR --------------");
 			
+			System.out.println("-SOLICITANTE : " + nome + "---------");
+			System.out.println("-IDADE SOLICITANTE : " + idade + "--------");
+			System.out.println("-NOME DA MÃE : " + maeN + "---------");
+			System.out.println("-ENDEREÇO : " + enderc + "-------");
+			System.out.println("Seu numero de protocolo : " + protP + idade + "GO");
+			System.out.println("-----------------------------------------------------------");
 			
 			System.out.println("Seus dados foram recebidos, aguarde o númeor do documento");
+			
+			
 			System.out.println("-----------TSE AGRADECE SEU CONTATO --------------");
-			
-			
 
 		}
 
-	if(idade<=16&&possui==1)
+		if (idade <= 16 && possui == 1)
 
-	{
-		System.out.println(menoridade + " INVÁLIDO, não pode ter titulo de Eleitor");
+		{
+			System.out.println(menoridade + " INVÁLIDO, não pode ter titulo de Eleitor");
 
-		System.out.println("-------------------------------------");
-		System.out.println("-----------TSE AGRADECE SEU CONTATO --------------");
+			System.out.println("-------------------------------------");
+			System.out.println("-----------TSE AGRADECE SEU CONTATO --------------");
+		}
+
+		if (idade <= 16) {
+			int midadeAdulto = (18 - idade);
+			System.out.println("--------SUA MAOIRIDADE--------------------");
+			System.out.println("Em " + midadeAdulto + " anos poderá iniciar a emissão de seu Título");
+			System.out.println("-------------------------------------");
+			System.out.println("-----------TSE AGRADECE SEU CONTATO --------------");
+		}
+
 	}
-
-	if(idade<=16)
-	{
-		int midadeAdulto = (18 - idade);
-		System.out.println("--------SUA MAOIRIDADE--------------------");
-		System.out.println("Em " + midadeAdulto + " anos poderá iniciar a emissão de seu Título");
-		System.out.println("-------------------------------------");
-		System.out.println("-----------TSE AGRADECE SEU CONTATO --------------");
-	}
-
-}
 
 }
